@@ -1,0 +1,15 @@
+services:
+  nanobot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nanobot
+    volumes:
+      - nanobot-config:/root/.nanobot
+    restart: unless-stopped
+    # default dari Dockerfile kamu: ENTRYPOINT ["nanobot"], CMD ["status"]
+    # kalau mau menjalankan mode lain, override:
+    # command: ["gateway"]
+
+volumes:
+  nanobot-config:
