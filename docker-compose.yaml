@@ -13,4 +13,4 @@ services:
     # command: ["gateway"]
 
 volumes:
-  nanobot-config:
+  nanobot-workspace:
