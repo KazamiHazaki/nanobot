@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: nanobot
     volumes:
+      - ../files/config.json:/root/.nanobot/config.json
       - nanobot-workspace:/root/.nanobot/workspace
     restart: unless-stopped
     # default dari Dockerfile kamu: ENTRYPOINT ["nanobot"], CMD ["status"]
